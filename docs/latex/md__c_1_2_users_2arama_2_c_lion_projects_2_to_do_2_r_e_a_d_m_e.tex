@@ -1,0 +1,173 @@
+\chapter{README}
+\hypertarget{md__c_1_2_users_2arama_2_c_lion_projects_2_to_do_2_r_e_a_d_m_e}{}\label{md__c_1_2_users_2arama_2_c_lion_projects_2_to_do_2_r_e_a_d_m_e}\index{README@{README}}
+﻿---\hypertarget{md__c_1_2_users_2arama_2_c_lion_projects_2_to_do_2_r_e_a_d_m_e_autotoc_md0}{}\doxysection{\texorpdfstring{To\+Do Command Line Program}{To\+Do Command Line Program}}\label{md__c_1_2_users_2arama_2_c_lion_projects_2_to_do_2_r_e_a_d_m_e_autotoc_md0}
+A simple command-\/line To\+Do application that allows you to manage your tasks. Tasks are stored in a file ({\ttfamily todo.\+txt}), and the program provides commands for adding, removing, marking tasks as done, listing tasks, resetting tasks, and saving them to a file.
+
+\DoxyHorRuler{0}
+\hypertarget{md__c_1_2_users_2arama_2_c_lion_projects_2_to_do_2_r_e_a_d_m_e_autotoc_md2}{}\doxysubsection{\texorpdfstring{Table of Contents}{Table of Contents}}\label{md__c_1_2_users_2arama_2_c_lion_projects_2_to_do_2_r_e_a_d_m_e_autotoc_md2}
+
+\begin{DoxyItemize}
+\item Features
+\item Installation
+\item Usage
+\begin{DoxyItemize}
+\item Commands
+\end{DoxyItemize}
+\item File Format
+\item Doxygen Documentation
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md__c_1_2_users_2arama_2_c_lion_projects_2_to_do_2_r_e_a_d_m_e_autotoc_md4}{}\doxysubsection{\texorpdfstring{Features}{Features}}\label{md__c_1_2_users_2arama_2_c_lion_projects_2_to_do_2_r_e_a_d_m_e_autotoc_md4}
+
+\begin{DoxyItemize}
+\item {\bfseries{Add Tasks}}\+: Add a new task to the list.
+\item {\bfseries{Remove Tasks}}\+: Remove a task by its index.
+\item {\bfseries{Mark Tasks as Done}}\+: Mark a task as completed.
+\item {\bfseries{List Tasks}}\+: Display all tasks with their completion status.
+\item {\bfseries{Reset Tasks}}\+: Clear all tasks from the list.
+\item {\bfseries{Persistent Storage}}\+: Tasks are saved to and loaded from {\ttfamily todo.\+txt}.
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md__c_1_2_users_2arama_2_c_lion_projects_2_to_do_2_r_e_a_d_m_e_autotoc_md6}{}\doxysubsection{\texorpdfstring{Installation}{Installation}}\label{md__c_1_2_users_2arama_2_c_lion_projects_2_to_do_2_r_e_a_d_m_e_autotoc_md6}
+\hypertarget{md__c_1_2_users_2arama_2_c_lion_projects_2_to_do_2_r_e_a_d_m_e_autotoc_md7}{}\doxysubsubsection{\texorpdfstring{Requirements\+:}{Requirements\+:}}\label{md__c_1_2_users_2arama_2_c_lion_projects_2_to_do_2_r_e_a_d_m_e_autotoc_md7}
+
+\begin{DoxyItemize}
+\item A C++ compiler (e.\+g., {\ttfamily g++}, {\ttfamily clang++}) to compile the program.
+\item An operating system with terminal/command prompt support (Linux, mac\+OS, or Windows with an appropriate terminal setup).
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2arama_2_c_lion_projects_2_to_do_2_r_e_a_d_m_e_autotoc_md8}{}\doxysubsubsection{\texorpdfstring{Steps to Install\+:}{Steps to Install\+:}}\label{md__c_1_2_users_2arama_2_c_lion_projects_2_to_do_2_r_e_a_d_m_e_autotoc_md8}
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Clone the repository}} or download the source code.
+\item Open your terminal and navigate to the project folder.
+\item Compile the code using {\ttfamily g++} (or another C++ compiler)\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{g++\ -\/o\ todo\ todo.cpp}
+
+\end{DoxyCode}
+
+\item After compilation, the {\ttfamily todo} executable will be created in the same directory.
+\end{DoxyEnumerate}
+
+\DoxyHorRuler{0}
+\hypertarget{md__c_1_2_users_2arama_2_c_lion_projects_2_to_do_2_r_e_a_d_m_e_autotoc_md10}{}\doxysubsection{\texorpdfstring{Usage}{Usage}}\label{md__c_1_2_users_2arama_2_c_lion_projects_2_to_do_2_r_e_a_d_m_e_autotoc_md10}
+Once the program is compiled, you can use the {\ttfamily todo} command from your terminal.\hypertarget{md__c_1_2_users_2arama_2_c_lion_projects_2_to_do_2_r_e_a_d_m_e_autotoc_md11}{}\doxysubsubsection{\texorpdfstring{Running the Program\+:}{Running the Program\+:}}\label{md__c_1_2_users_2arama_2_c_lion_projects_2_to_do_2_r_e_a_d_m_e_autotoc_md11}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./todo\ [COMMAND]\ [ARGUMENTS]}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2arama_2_c_lion_projects_2_to_do_2_r_e_a_d_m_e_autotoc_md12}{}\doxysubsubsection{\texorpdfstring{Available Commands\+:}{Available Commands\+:}}\label{md__c_1_2_users_2arama_2_c_lion_projects_2_to_do_2_r_e_a_d_m_e_autotoc_md12}
+
+\begin{DoxyEnumerate}
+\item {\bfseries{{\ttfamily list}}}\+: Lists all tasks.
+\begin{DoxyItemize}
+\item Displays the tasks saved in the {\ttfamily todo.\+txt} file along with their completion status.
+\item Example usage\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./todo\ list}
+
+\end{DoxyCode}
+
+\item {\bfseries{Example output}}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1.\ [\ ]\ Buy\ groceries}
+\DoxyCodeLine{2.\ [\ ]\ Clean\ the\ house}
+
+\end{DoxyCode}
+
+\end{DoxyItemize}
+\item {\bfseries{{\ttfamily add \mbox{[}TASK\mbox{]}}}}\+: Adds a new task to the list.
+\begin{DoxyItemize}
+\item Adds the task specified in the argument to the list.
+\item Example usage\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./todo\ add\ "{}Buy\ groceries"{}}
+\DoxyCodeLine{./todo\ add\ "{}Clean\ the\ house"{}}
+
+\end{DoxyCode}
+
+\end{DoxyItemize}
+\item {\bfseries{{\ttfamily remove \mbox{[}INDEX\mbox{]}}}}\+: Removes a task by its index.
+\begin{DoxyItemize}
+\item Removes the task at the specified index (1-\/based indexing).
+\item Example usage\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./todo\ remove\ 1}
+
+\end{DoxyCode}
+
+\end{DoxyItemize}
+\item {\bfseries{{\ttfamily done \mbox{[}INDEX\mbox{]}}}}\+: Marks a task as completed.
+\begin{DoxyItemize}
+\item Marks the task at the specified index as done.
+\item Example usage\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./todo\ done\ 2}
+
+\end{DoxyCode}
+
+\end{DoxyItemize}
+\item {\bfseries{{\ttfamily reset}}}\+: Clears all tasks.
+\begin{DoxyItemize}
+\item Deletes all tasks from the task list.
+\item Example usage\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./todo\ reset}
+
+\end{DoxyCode}
+
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+
+\DoxyHorRuler{0}
+\hypertarget{md__c_1_2_users_2arama_2_c_lion_projects_2_to_do_2_r_e_a_d_m_e_autotoc_md14}{}\doxysubsection{\texorpdfstring{File Format}{File Format}}\label{md__c_1_2_users_2arama_2_c_lion_projects_2_to_do_2_r_e_a_d_m_e_autotoc_md14}
+The tasks are stored in a file named {\ttfamily todo.\+txt} in the following format\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[COMPLETION\_STATUS]\ [TASK\_DESCRIPTION]}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item {\bfseries{\mbox{[}COMPLETION\+\_\+\+STATUS\mbox{]}}}\+: A boolean value ({\ttfamily 0} for incomplete, {\ttfamily 1} for completed).
+\item {\bfseries{\mbox{[}TASK\+\_\+\+DESCRIPTION\mbox{]}}}\+: A string that describes the task.
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2arama_2_c_lion_projects_2_to_do_2_r_e_a_d_m_e_autotoc_md15}{}\doxysubsubsection{\texorpdfstring{Example of {\ttfamily todo.\+txt}\+:}{Example of {\ttfamily todo.\+txt}\+:}}\label{md__c_1_2_users_2arama_2_c_lion_projects_2_to_do_2_r_e_a_d_m_e_autotoc_md15}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{0\ Buy\ groceries}
+\DoxyCodeLine{0\ Clean\ the\ house}
+\DoxyCodeLine{1\ Finish\ project}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md__c_1_2_users_2arama_2_c_lion_projects_2_to_do_2_r_e_a_d_m_e_autotoc_md17}{}\doxysubsection{\texorpdfstring{Notes\+:}{Notes\+:}}\label{md__c_1_2_users_2arama_2_c_lion_projects_2_to_do_2_r_e_a_d_m_e_autotoc_md17}
+
+\begin{DoxyItemize}
+\item The {\bfseries{completion status}} ({\ttfamily \mbox{[}X\mbox{]}} for done, {\ttfamily \mbox{[} \mbox{]}} for incomplete) is displayed when you list the tasks using the {\ttfamily list} command.
+\item Tasks are saved automatically to {\ttfamily todo.\+txt} when any modification is made (adding, removing, or marking tasks as done).
+\item When you run the program, it loads tasks from {\ttfamily todo.\+txt} into memory to perform operations.
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md__c_1_2_users_2arama_2_c_lion_projects_2_to_do_2_r_e_a_d_m_e_autotoc_md19}{}\doxysubsection{\texorpdfstring{Doxygen Documentation}{Doxygen Documentation}}\label{md__c_1_2_users_2arama_2_c_lion_projects_2_to_do_2_r_e_a_d_m_e_autotoc_md19}
+If you want to view the generated Doxygen documentation for this project\+:
+
+
+\begin{DoxyEnumerate}
+\item Navigate to the {\ttfamily docs/html} folder in the project directory.
+\item Open the {\ttfamily index.\+html} file in your web browser.
+\end{DoxyEnumerate}
+
+This will show you the detailed documentation for the code, including classes, functions, and descriptions.
+
+\DoxyHorRuler{0}
+ 

@@ -1,0 +1,202 @@
+\doxysection{C\+:/\+Users/arama/\+CLion\+Projects/\+To\+Do/todo.cpp File Reference}
+\hypertarget{todo_8cpp}{}\label{todo_8cpp}\index{C:/Users/arama/CLionProjects/ToDo/todo.cpp@{C:/Users/arama/CLionProjects/ToDo/todo.cpp}}
+
+
+A simple To\+Do command-\/line program to manage tasks.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_task}{Task}}
+\begin{DoxyCompactList}\small\item\em Represents a task in the To\+Do list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{todo_8cpp_a600478327502239195208d1fdca0f7c0}{list\+Tasks}} (vector$<$ \mbox{\hyperlink{struct_task}{Task}} $>$ \&tasks)
+\begin{DoxyCompactList}\small\item\em Lists all tasks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{todo_8cpp_ade2993c15d978cb3c63ad7edcc285701}{add\+Task}} (vector$<$ \mbox{\hyperlink{struct_task}{Task}} $>$ \&tasks, const string \&task)
+\begin{DoxyCompactList}\small\item\em Adds a new task. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{todo_8cpp_aebdca44d337f2bcd7071bcceb9f56bb8}{remove\+Task}} (vector$<$ \mbox{\hyperlink{struct_task}{Task}} $>$ \&tasks, int index)
+\begin{DoxyCompactList}\small\item\em Removes a task by index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{todo_8cpp_a5938fa77407466486ef9cfe88267bf93}{mark\+Done}} (vector$<$ \mbox{\hyperlink{struct_task}{Task}} $>$ \&tasks, int index)
+\begin{DoxyCompactList}\small\item\em Marks a task as completed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{todo_8cpp_a2367fb45338d4de23175a4fc16afa9c5}{reset\+Tasks}} (vector$<$ \mbox{\hyperlink{struct_task}{Task}} $>$ \&tasks)
+\begin{DoxyCompactList}\small\item\em Clears all tasks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{todo_8cpp_a9e0cd78d6f08e49303a6b710c623347a}{load\+Tasks\+From\+File}} (vector$<$ \mbox{\hyperlink{struct_task}{Task}} $>$ \&tasks)
+\begin{DoxyCompactList}\small\item\em Loads tasks from the file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{todo_8cpp_abba30971cdda3b8b2eb2746f3ee7259f}{save\+Tasks}} (const vector$<$ \mbox{\hyperlink{struct_task}{Task}} $>$ \&tasks)
+\begin{DoxyCompactList}\small\item\em Saves tasks to the file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{todo_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Main entry point of the To\+Do application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const string \mbox{\hyperlink{todo_8cpp_a192ae3fbc914c80cfaa03dd6f27193d1}{FILENAME}} = "{}todo.\+txt"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A simple To\+Do command-\/line program to manage tasks. 
+
+This program allows the user to\+:
+\begin{DoxyItemize}
+\item Add, remove, and list tasks.
+\item Mark tasks as completed.
+\item Reset all tasks.
+\end{DoxyItemize}
+
+The tasks are saved in the "{}todo.\+txt"{} file.
+
+\begin{DoxySeeAlso}{See also}
+todo class 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{todo_8cpp_ade2993c15d978cb3c63ad7edcc285701}\index{todo.cpp@{todo.cpp}!addTask@{addTask}}
+\index{addTask@{addTask}!todo.cpp@{todo.cpp}}
+\doxysubsubsection{\texorpdfstring{addTask()}{addTask()}}
+{\footnotesize\ttfamily \label{todo_8cpp_ade2993c15d978cb3c63ad7edcc285701} 
+void add\+Task (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{struct_task}{Task}} $>$ \&}]{tasks}{, }\item[{const string \&}]{task}{}\end{DoxyParamCaption})}
+
+
+
+Adds a new task. 
+
+Creates a new task with the given description and adds it to the tasks list. 
+\begin{DoxyParams}{Parameters}
+{\em tasks} & The vector of tasks. \\
+\hline
+{\em task} & The description of the task to be added. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{todo_8cpp_a600478327502239195208d1fdca0f7c0}\index{todo.cpp@{todo.cpp}!listTasks@{listTasks}}
+\index{listTasks@{listTasks}!todo.cpp@{todo.cpp}}
+\doxysubsubsection{\texorpdfstring{listTasks()}{listTasks()}}
+{\footnotesize\ttfamily \label{todo_8cpp_a600478327502239195208d1fdca0f7c0} 
+void list\+Tasks (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{struct_task}{Task}} $>$ \&}]{tasks}{}\end{DoxyParamCaption})}
+
+
+
+Lists all tasks. 
+
+Iterates through the tasks vector and displays each task\textquotesingle{}s description and its completion status. 
+\begin{DoxyParams}{Parameters}
+{\em tasks} & The vector of tasks to be listed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{todo_8cpp_a9e0cd78d6f08e49303a6b710c623347a}\index{todo.cpp@{todo.cpp}!loadTasksFromFile@{loadTasksFromFile}}
+\index{loadTasksFromFile@{loadTasksFromFile}!todo.cpp@{todo.cpp}}
+\doxysubsubsection{\texorpdfstring{loadTasksFromFile()}{loadTasksFromFile()}}
+{\footnotesize\ttfamily \label{todo_8cpp_a9e0cd78d6f08e49303a6b710c623347a} 
+void load\+Tasks\+From\+File (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{struct_task}{Task}} $>$ \&}]{tasks}{}\end{DoxyParamCaption})}
+
+
+
+Loads tasks from the file. 
+
+Reads tasks from the "{}todo.\+txt"{} file and populates the tasks list. 
+\begin{DoxyParams}{Parameters}
+{\em tasks} & The vector of tasks to be populated. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{todo_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\index{todo.cpp@{todo.cpp}!main@{main}}
+\index{main@{main}!todo.cpp@{todo.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{todo_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Main entry point of the To\+Do application. 
+
+Handles command-\/line arguments to execute the appropriate task-\/related functions. 
+\begin{DoxyParams}{Parameters}
+{\em argc} & The number of command-\/line arguments. \\
+\hline
+{\em argv} & The array of command-\/line arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An integer status code (1 for invalid input, 0 for success). 
+\end{DoxyReturn}
+\Hypertarget{todo_8cpp_a5938fa77407466486ef9cfe88267bf93}\index{todo.cpp@{todo.cpp}!markDone@{markDone}}
+\index{markDone@{markDone}!todo.cpp@{todo.cpp}}
+\doxysubsubsection{\texorpdfstring{markDone()}{markDone()}}
+{\footnotesize\ttfamily \label{todo_8cpp_a5938fa77407466486ef9cfe88267bf93} 
+void mark\+Done (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{struct_task}{Task}} $>$ \&}]{tasks}{, }\item[{int}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Marks a task as completed. 
+
+Sets the completion status of the task at the specified index to true. 
+\begin{DoxyParams}{Parameters}
+{\em tasks} & The vector of tasks. \\
+\hline
+{\em index} & The index of the task to be marked as done. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{todo_8cpp_aebdca44d337f2bcd7071bcceb9f56bb8}\index{todo.cpp@{todo.cpp}!removeTask@{removeTask}}
+\index{removeTask@{removeTask}!todo.cpp@{todo.cpp}}
+\doxysubsubsection{\texorpdfstring{removeTask()}{removeTask()}}
+{\footnotesize\ttfamily \label{todo_8cpp_aebdca44d337f2bcd7071bcceb9f56bb8} 
+void remove\+Task (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{struct_task}{Task}} $>$ \&}]{tasks}{, }\item[{int}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Removes a task by index. 
+
+Removes the task at the specified index in the tasks list. 
+\begin{DoxyParams}{Parameters}
+{\em tasks} & The vector of tasks. \\
+\hline
+{\em index} & The index of the task to be removed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{todo_8cpp_a2367fb45338d4de23175a4fc16afa9c5}\index{todo.cpp@{todo.cpp}!resetTasks@{resetTasks}}
+\index{resetTasks@{resetTasks}!todo.cpp@{todo.cpp}}
+\doxysubsubsection{\texorpdfstring{resetTasks()}{resetTasks()}}
+{\footnotesize\ttfamily \label{todo_8cpp_a2367fb45338d4de23175a4fc16afa9c5} 
+void reset\+Tasks (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{struct_task}{Task}} $>$ \&}]{tasks}{}\end{DoxyParamCaption})}
+
+
+
+Clears all tasks. 
+
+Removes all tasks from the tasks list. 
+\begin{DoxyParams}{Parameters}
+{\em tasks} & The vector of tasks. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{todo_8cpp_abba30971cdda3b8b2eb2746f3ee7259f}\index{todo.cpp@{todo.cpp}!saveTasks@{saveTasks}}
+\index{saveTasks@{saveTasks}!todo.cpp@{todo.cpp}}
+\doxysubsubsection{\texorpdfstring{saveTasks()}{saveTasks()}}
+{\footnotesize\ttfamily \label{todo_8cpp_abba30971cdda3b8b2eb2746f3ee7259f} 
+void save\+Tasks (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{struct_task}{Task}} $>$ \&}]{tasks}{}\end{DoxyParamCaption})}
+
+
+
+Saves tasks to the file. 
+
+Writes the current tasks to the "{}todo.\+txt"{} file, saving the description and completion status. 
+\begin{DoxyParams}{Parameters}
+{\em tasks} & The vector of tasks to be saved. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{todo_8cpp_a192ae3fbc914c80cfaa03dd6f27193d1}\index{todo.cpp@{todo.cpp}!FILENAME@{FILENAME}}
+\index{FILENAME@{FILENAME}!todo.cpp@{todo.cpp}}
+\doxysubsubsection{\texorpdfstring{FILENAME}{FILENAME}}
+{\footnotesize\ttfamily \label{todo_8cpp_a192ae3fbc914c80cfaa03dd6f27193d1} 
+const string FILENAME = "{}todo.\+txt"{}}
+
+The filename where tasks are stored. 
