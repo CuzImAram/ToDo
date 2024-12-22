@@ -1,0 +1,11 @@
+# Ignore IDE configurations
+.idea/
+
+# Ignore CMake build directory
+cmake-build-debug/
+
+# Ignore the todo executable
+todo.exe
+
+# Ignore the todo.txt file
+todo.txt

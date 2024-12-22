@@ -1,1 +1,0 @@
-CMakeLists.txt not found in C:\Users\arama\CLionProjects\ToDo Select CMakeLists.txt
