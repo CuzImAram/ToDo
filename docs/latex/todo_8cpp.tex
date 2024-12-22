@@ -28,8 +28,10 @@ void \mbox{\hyperlink{todo_8cpp_a5938fa77407466486ef9cfe88267bf93}{mark\+Done}} 
 \begin{DoxyCompactList}\small\item\em Marks a task as completed. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{todo_8cpp_a2367fb45338d4de23175a4fc16afa9c5}{reset\+Tasks}} (vector$<$ \mbox{\hyperlink{struct_task}{Task}} $>$ \&tasks)
 \begin{DoxyCompactList}\small\item\em Clears all tasks. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{todo_8cpp_a3101bc0142a49d9d11ad3f8cac766a2d}{trim}} (const string \&str)
+\begin{DoxyCompactList}\small\item\em Trims leading and trailing whitespaces from a string. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{todo_8cpp_a9e0cd78d6f08e49303a6b710c623347a}{load\+Tasks\+From\+File}} (vector$<$ \mbox{\hyperlink{struct_task}{Task}} $>$ \&tasks)
-\begin{DoxyCompactList}\small\item\em Loads tasks from the file. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Loads tasks from a file into the task list. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{todo_8cpp_abba30971cdda3b8b2eb2746f3ee7259f}{save\+Tasks}} (const vector$<$ \mbox{\hyperlink{struct_task}{Task}} $>$ \&tasks)
 \begin{DoxyCompactList}\small\item\em Saves tasks to the file. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{todo_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
@@ -111,16 +113,28 @@ void load\+Tasks\+From\+File (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hy
 
 
 
-Loads tasks from the file. 
+Loads tasks from a file into the task list. 
 
-Reads tasks from the "{}todo.\+txt"{} file and populates the tasks list. 
+This function reads tasks from a file specified by the {\ttfamily FILENAME} constant. Each task in the file is expected to be stored on a new line in the format\+: \begin{DoxyVerb}<completion_status> <task_description>
+\end{DoxyVerb}
+
+
+where\+:
+\begin{DoxyItemize}
+\item {\ttfamily \texorpdfstring{$<$}{<}completion\+\_\+status\texorpdfstring{$>$}{>}} is a boolean (0 or 1) indicating whether the task is completed.
+\item {\ttfamily \texorpdfstring{$<$}{<}task\+\_\+description\texorpdfstring{$>$}{>}} is the string description of the task.
+\end{DoxyItemize}
+
+Tasks are loaded into the provided vector, clearing any existing tasks before loading. If the file cannot be opened, a message is displayed to the user.
+
+
 \begin{DoxyParams}{Parameters}
-{\em tasks} & The vector of tasks to be populated. \\
+{\em tasks} & The vector of tasks to be populated from the file. \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{todo_8cpp_source_l00118}{118}} of file \mbox{\hyperlink{todo_8cpp_source}{todo.\+cpp}}.
+Definition at line \mbox{\hyperlink{todo_8cpp_source_l00148}{148}} of file \mbox{\hyperlink{todo_8cpp_source}{todo.\+cpp}}.
 
 \Hypertarget{todo_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\index{todo.cpp@{todo.cpp}!main@{main}}
 \index{main@{main}!todo.cpp@{todo.cpp}}
@@ -144,7 +158,7 @@ An integer status code (1 for invalid input, 0 for success).
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{todo_8cpp_source_l00161}{161}} of file \mbox{\hyperlink{todo_8cpp_source}{todo.\+cpp}}.
+Definition at line \mbox{\hyperlink{todo_8cpp_source_l00192}{192}} of file \mbox{\hyperlink{todo_8cpp_source}{todo.\+cpp}}.
 
 \Hypertarget{todo_8cpp_a5938fa77407466486ef9cfe88267bf93}\index{todo.cpp@{todo.cpp}!markDone@{markDone}}
 \index{markDone@{markDone}!todo.cpp@{todo.cpp}}
@@ -224,7 +238,31 @@ Writes the current tasks to the "{}todo.\+txt"{} file, saving the description an
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{todo_8cpp_source_l00143}{143}} of file \mbox{\hyperlink{todo_8cpp_source}{todo.\+cpp}}.
+Definition at line \mbox{\hyperlink{todo_8cpp_source_l00174}{174}} of file \mbox{\hyperlink{todo_8cpp_source}{todo.\+cpp}}.
+
+\Hypertarget{todo_8cpp_a3101bc0142a49d9d11ad3f8cac766a2d}\index{todo.cpp@{todo.cpp}!trim@{trim}}
+\index{trim@{trim}!todo.cpp@{todo.cpp}}
+\doxysubsubsection{\texorpdfstring{trim()}{trim()}}
+{\footnotesize\ttfamily \label{todo_8cpp_a3101bc0142a49d9d11ad3f8cac766a2d} 
+string trim (\begin{DoxyParamCaption}\item[{const string \&}]{str}{}\end{DoxyParamCaption})}
+
+
+
+Trims leading and trailing whitespaces from a string. 
+
+This function removes any leading and trailing whitespace characters, including spaces, tabs, newlines, and carriage returns, from the input string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The input string to be trimmed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new string with leading and trailing whitespaces removed. If the input string contains only whitespaces, an empty string is returned. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{todo_8cpp_source_l00122}{122}} of file \mbox{\hyperlink{todo_8cpp_source}{todo.\+cpp}}.
 
 
 

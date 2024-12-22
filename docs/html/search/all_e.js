@@ -8,7 +8,8 @@ var searchData=
   ['todo_20command_20line_20program_5',['ToDo Command Line Program',['../index.html#autotoc_md0',1,'']]],
   ['todo_20txt_20tt_20_3a_6',['Example of &lt;tt&gt;todo.txt&lt;/tt&gt;:',['../index.html#autotoc_md15',1,'']]],
   ['todo_2ecpp_7',['todo.cpp',['../todo_8cpp.html',1,'']]],
-  ['tt_20_3a_8',['Example of &lt;tt&gt;todo.txt&lt;/tt&gt;:',['../index.html#autotoc_md15',1,'']]],
-  ['tt_20todo_20txt_20tt_20_3a_9',['Example of &lt;tt&gt;todo.txt&lt;/tt&gt;:',['../index.html#autotoc_md15',1,'']]],
-  ['txt_20tt_20_3a_10',['Example of &lt;tt&gt;todo.txt&lt;/tt&gt;:',['../index.html#autotoc_md15',1,'']]]
+  ['trim_8',['trim',['../todo_8cpp.html#a3101bc0142a49d9d11ad3f8cac766a2d',1,'todo.cpp']]],
+  ['tt_20_3a_9',['Example of &lt;tt&gt;todo.txt&lt;/tt&gt;:',['../index.html#autotoc_md15',1,'']]],
+  ['tt_20todo_20txt_20tt_20_3a_10',['Example of &lt;tt&gt;todo.txt&lt;/tt&gt;:',['../index.html#autotoc_md15',1,'']]],
+  ['txt_20tt_20_3a_11',['Example of &lt;tt&gt;todo.txt&lt;/tt&gt;:',['../index.html#autotoc_md15',1,'']]]
 ];

@@ -110,10 +110,40 @@ void resetTasks(vector<Task>& tasks) {
 }
 
 /**
- * @brief Loads tasks from the file.
+ * @brief Trims leading and trailing whitespaces from a string.
  *
- * Reads tasks from the "todo.txt" file and populates the tasks list.
- * @param tasks The vector of tasks to be populated.
+ * This function removes any leading and trailing whitespace characters, including
+ * spaces, tabs, newlines, and carriage returns, from the input string.
+ *
+ * @param str The input string to be trimmed.
+ * @return A new string with leading and trailing whitespaces removed. If the input string
+ *         contains only whitespaces, an empty string is returned.
+ */
+string trim(const string& str) {
+    size_t first = str.find_first_not_of(" \t\n\r");
+    size_t last = str.find_last_not_of(" \t\n\r");
+    if (first == string::npos || last == string::npos) {
+        return "";
+    }
+    return str.substr(first, (last - first + 1));
+}
+
+/**
+ * @brief Loads tasks from a file into the task list.
+ *
+ * This function reads tasks from a file specified by the `FILENAME` constant.
+ * Each task in the file is expected to be stored on a new line in the format:
+ *
+ *     <completion_status> <task_description>
+ *
+ * where:
+ * - `<completion_status>` is a boolean (0 or 1) indicating whether the task is completed.
+ * - `<task_description>` is the string description of the task.
+ *
+ * Tasks are loaded into the provided vector, clearing any existing tasks before loading.
+ * If the file cannot be opened, a message is displayed to the user.
+ *
+ * @param tasks The vector of tasks to be populated from the file.
  */
 void loadTasksFromFile(vector<Task>& tasks) {
     ifstream file(FILENAME);
@@ -122,10 +152,11 @@ void loadTasksFromFile(vector<Task>& tasks) {
         tasks.clear();
         while (getline(file, line)) {
             stringstream ss(line);
-            string desc;
             bool completed;
+            string desc;
             ss >> completed;
             getline(ss, desc);
+            desc = trim(desc);  // Trim leading/trailing spaces from description
             tasks.push_back(Task(desc, completed));
         }
         file.close();

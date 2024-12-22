@@ -125,8 +125,11 @@ Functions</h2></td></tr>
 <tr class="memitem:a2367fb45338d4de23175a4fc16afa9c5" id="r_a2367fb45338d4de23175a4fc16afa9c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2367fb45338d4de23175a4fc16afa9c5">resetTasks</a> (vector&lt; <a class="el" href="struct_task.html">Task</a> &gt; &amp;tasks)</td></tr>
 <tr class="memdesc:a2367fb45338d4de23175a4fc16afa9c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears all tasks.  <br /></td></tr>
 <tr class="separator:a2367fb45338d4de23175a4fc16afa9c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3101bc0142a49d9d11ad3f8cac766a2d" id="r_a3101bc0142a49d9d11ad3f8cac766a2d"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3101bc0142a49d9d11ad3f8cac766a2d">trim</a> (const string &amp;str)</td></tr>
+<tr class="memdesc:a3101bc0142a49d9d11ad3f8cac766a2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trims leading and trailing whitespaces from a string.  <br /></td></tr>
+<tr class="separator:a3101bc0142a49d9d11ad3f8cac766a2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e0cd78d6f08e49303a6b710c623347a" id="r_a9e0cd78d6f08e49303a6b710c623347a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e0cd78d6f08e49303a6b710c623347a">loadTasksFromFile</a> (vector&lt; <a class="el" href="struct_task.html">Task</a> &gt; &amp;tasks)</td></tr>
-<tr class="memdesc:a9e0cd78d6f08e49303a6b710c623347a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads tasks from the file.  <br /></td></tr>
+<tr class="memdesc:a9e0cd78d6f08e49303a6b710c623347a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads tasks from a file into the task list.  <br /></td></tr>
 <tr class="separator:a9e0cd78d6f08e49303a6b710c623347a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abba30971cdda3b8b2eb2746f3ee7259f" id="r_abba30971cdda3b8b2eb2746f3ee7259f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abba30971cdda3b8b2eb2746f3ee7259f">saveTasks</a> (const vector&lt; <a class="el" href="struct_task.html">Task</a> &gt; &amp;tasks)</td></tr>
 <tr class="memdesc:abba30971cdda3b8b2eb2746f3ee7259f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves tasks to the file.  <br /></td></tr>
@@ -226,15 +229,21 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Loads tasks from the file. </p>
-<p>Reads tasks from the "todo.txt" file and populates the tasks list. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Loads tasks from a file into the task list. </p>
+<p>This function reads tasks from a file specified by the <code>FILENAME</code> constant. Each task in the file is expected to be stored on a new line in the format: </p><pre class="fragment">&lt;completion_status&gt; &lt;task_description&gt;
+</pre><p>where:</p><ul>
+<li><code>&lt;completion_status&gt;</code> is a boolean (0 or 1) indicating whether the task is completed.</li>
+<li><code>&lt;task_description&gt;</code> is the string description of the task.</li>
+</ul>
+<p>Tasks are loaded into the provided vector, clearing any existing tasks before loading. If the file cannot be opened, a message is displayed to the user.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">tasks</td><td>The vector of tasks to be populated. </td></tr>
+    <tr><td class="paramname">tasks</td><td>The vector of tasks to be populated from the file. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="todo_8cpp_source.html#l00118">118</a> of file <a class="el" href="todo_8cpp_source.html">todo.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="todo_8cpp_source.html#l00148">148</a> of file <a class="el" href="todo_8cpp_source.html">todo.cpp</a>.</p>
 
 </div>
 </div>
@@ -267,7 +276,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>An integer status code (1 for invalid input, 0 for success). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="todo_8cpp_source.html#l00161">161</a> of file <a class="el" href="todo_8cpp_source.html">todo.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="todo_8cpp_source.html#l00192">192</a> of file <a class="el" href="todo_8cpp_source.html">todo.cpp</a>.</p>
 
 </div>
 </div>
@@ -385,7 +394,36 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="todo_8cpp_source.html#l00143">143</a> of file <a class="el" href="todo_8cpp_source.html">todo.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="todo_8cpp_source.html#l00174">174</a> of file <a class="el" href="todo_8cpp_source.html">todo.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3101bc0142a49d9d11ad3f8cac766a2d" name="a3101bc0142a49d9d11ad3f8cac766a2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3101bc0142a49d9d11ad3f8cac766a2d">&#9670;&#160;</a></span>trim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string trim </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Trims leading and trailing whitespaces from a string. </p>
+<p>This function removes any leading and trailing whitespace characters, including spaces, tabs, newlines, and carriage returns, from the input string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>The input string to be trimmed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new string with leading and trailing whitespaces removed. If the input string contains only whitespaces, an empty string is returned. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="todo_8cpp_source.html#l00122">122</a> of file <a class="el" href="todo_8cpp_source.html">todo.cpp</a>.</p>
 
 </div>
 </div>
