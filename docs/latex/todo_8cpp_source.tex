@@ -110,22 +110,23 @@
 \DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00208}00208\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ task(argv[2]);}
 \DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00209}00209\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{todo_8cpp_ade2993c15d978cb3c63ad7edcc285701}{addTask}}(tasks,\ task);}
 \DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00210}00210\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{todo_8cpp_abba30971cdda3b8b2eb2746f3ee7259f}{saveTasks}}(tasks);}
-\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00211}00211\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}remove"{}}\ \&\&\ argc\ >\ 2)\ \{}
-\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00212}00212\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ index\ =\ stoi(argv[2]);}
-\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00213}00213\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{todo_8cpp_aebdca44d337f2bcd7071bcceb9f56bb8}{removeTask}}(tasks,\ index);}
-\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00214}00214\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{todo_8cpp_abba30971cdda3b8b2eb2746f3ee7259f}{saveTasks}}(tasks);}
-\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00215}00215\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}done"{}}\ \&\&\ argc\ >\ 2)\ \{}
-\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00216}00216\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ index\ =\ stoi(argv[2]);}
-\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00217}00217\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{todo_8cpp_a5938fa77407466486ef9cfe88267bf93}{markDone}}(tasks,\ index);}
-\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00218}00218\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{todo_8cpp_abba30971cdda3b8b2eb2746f3ee7259f}{saveTasks}}(tasks);}
-\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00219}00219\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}reset"{}})\ \{}
-\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00220}00220\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{todo_8cpp_a2367fb45338d4de23175a4fc16afa9c5}{resetTasks}}(tasks);}
-\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00221}00221\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{todo_8cpp_abba30971cdda3b8b2eb2746f3ee7259f}{saveTasks}}(tasks);}
-\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00222}00222\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00223}00223\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ command."{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00224}00224\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00225}00225\ }
-\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00226}00226\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00227}00227\ \}}
+\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00211}00211\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{todo_8cpp_a600478327502239195208d1fdca0f7c0}{listTasks}}(tasks);}
+\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00212}00212\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}remove"{}}\ \&\&\ argc\ >\ 2)\ \{}
+\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00213}00213\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ index\ =\ stoi(argv[2]);}
+\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00214}00214\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{todo_8cpp_aebdca44d337f2bcd7071bcceb9f56bb8}{removeTask}}(tasks,\ index);}
+\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00215}00215\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{todo_8cpp_abba30971cdda3b8b2eb2746f3ee7259f}{saveTasks}}(tasks);}
+\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00216}00216\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}done"{}}\ \&\&\ argc\ >\ 2)\ \{}
+\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00217}00217\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ index\ =\ stoi(argv[2]);}
+\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00218}00218\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{todo_8cpp_a5938fa77407466486ef9cfe88267bf93}{markDone}}(tasks,\ index);}
+\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00219}00219\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{todo_8cpp_abba30971cdda3b8b2eb2746f3ee7259f}{saveTasks}}(tasks);}
+\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00220}00220\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}reset"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00221}00221\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{todo_8cpp_a2367fb45338d4de23175a4fc16afa9c5}{resetTasks}}(tasks);}
+\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00222}00222\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{todo_8cpp_abba30971cdda3b8b2eb2746f3ee7259f}{saveTasks}}(tasks);}
+\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00223}00223\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00224}00224\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ command."{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00225}00225\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00226}00226\ }
+\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00227}00227\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{todo_8cpp_source_l00228}00228\ \}}
 
 \end{DoxyCode}

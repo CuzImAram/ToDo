@@ -16,6 +16,7 @@ A simple command-\/line To\+Do application that allows you to manage your tasks.
 \item Commands
 \end{DoxyItemize}
 \item File Format
+\item Make the \`{}todo\`{} Command Globally Executable on Windows
 \item Doxygen Documentation
 \end{DoxyItemize}
 
@@ -160,7 +161,42 @@ The tasks are stored in a file named {\ttfamily todo.\+txt} in the following for
 \end{DoxyItemize}
 
 \DoxyHorRuler{0}
-\hypertarget{index_autotoc_md19}{}\doxysubsection{\texorpdfstring{Doxygen Documentation}{Doxygen Documentation}}\label{index_autotoc_md19}
+\hypertarget{index_autotoc_md19}{}\doxysubsection{\texorpdfstring{Make the {\ttfamily todo} Command Globally Executable on Windows}{Make the {\ttfamily todo} Command Globally Executable on Windows}}\label{index_autotoc_md19}
+To execute the {\ttfamily todo} program from anywhere in your terminal without needing to specify its full path\+:\hypertarget{index_autotoc_md20}{}\doxysubsubsection{\texorpdfstring{Move the Executable to a Folder in the PATH}{Move the Executable to a Folder in the PATH}}\label{index_autotoc_md20}
+You need to place {\ttfamily todo.\+exe} in a directory that is included in your system\textquotesingle{}s {\ttfamily PATH} environment variable. Alternatively, you can use the directory where your project is located, as long as the {\ttfamily todo.\+exe} file is in it.
+
+{\bfseries{Steps}}\+:
+
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Use Your Project Directory}}\+: ~\newline
+ Ensure {\ttfamily todo.\+exe} is in the same folder as your project. For example, if your project is in {\ttfamily C\+:\textbackslash{}My\+Projects\textbackslash{}Todo\+App}, {\ttfamily todo.\+exe} should also be in {\ttfamily C\+:\textbackslash{}My\+Projects\textbackslash{}Todo\+App}.
+\item {\bfseries{Add Your Project Folder to the PATH}}\+:
+\begin{DoxyItemize}
+\item Open {\bfseries{Environment Variables}} (Search for "{}\+Environment Variables"{} in the Start Menu).
+\item Under {\bfseries{User Variables}} or {\bfseries{System Variables}}, locate and select {\ttfamily Path}.
+\item Click {\bfseries{Edit}} and add the directory of your project (e.\+g., {\ttfamily C\+:\textbackslash{}My\+Projects\textbackslash{}Todo\+App}).
+\item Save and close.
+\end{DoxyItemize}
+\item {\bfseries{Verify the Change}}\+:
+\begin{DoxyItemize}
+\item Open a {\bfseries{new}} Command Prompt.
+\item Run\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{where\ todo}
+
+\end{DoxyCode}
+
+\item If the path to {\ttfamily todo.\+exe} appears, it’s now accessible globally.
+\end{DoxyItemize}
+\item {\bfseries{Test the {\ttfamily todo} Command}}\+: ~\newline
+ Run any command to ensure the program works\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{todo\ list}
+
+\end{DoxyCode}
+
+\end{DoxyEnumerate}\hypertarget{index_autotoc_md21}{}\doxysubsection{\texorpdfstring{Doxygen Documentation}{Doxygen Documentation}}\label{index_autotoc_md21}
 If you want to view the generated Doxygen documentation for this project\+:
 
 

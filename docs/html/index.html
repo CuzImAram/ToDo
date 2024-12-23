@@ -102,6 +102,7 @@ Table of Contents</h2>
 </ul>
 </li>
 <li>File Format</li>
+<li>Make the `todo` Command Globally Executable on Windows</li>
 <li>Doxygen Documentation</li>
 </ul>
 <hr  />
@@ -203,6 +204,34 @@ Notes:</h2>
 </ul>
 <hr  />
 <h2><a class="anchor" id="autotoc_md19"></a>
+Make the <code>todo</code> Command Globally Executable on Windows</h2>
+<p>To execute the <code>todo</code> program from anywhere in your terminal without needing to specify its full path:</p>
+<h3><a class="anchor" id="autotoc_md20"></a>
+Move the Executable to a Folder in the PATH</h3>
+<p>You need to place <code>todo.exe</code> in a directory that is included in your system's <code>PATH</code> environment variable. Alternatively, you can use the directory where your project is located, as long as the <code>todo.exe</code> file is in it.</p>
+<p><b>Steps</b>:</p>
+<ol type="1">
+<li><b>Use Your Project Directory</b>: <br  />
+ Ensure <code>todo.exe</code> is in the same folder as your project. For example, if your project is in <code>C:\MyProjects\TodoApp</code>, <code>todo.exe</code> should also be in <code>C:\MyProjects\TodoApp</code>.</li>
+<li><b>Add Your Project Folder to the PATH</b>:<ul>
+<li>Open <b>Environment Variables</b> (Search for "Environment Variables" in the Start Menu).</li>
+<li>Under <b>User Variables</b> or <b>System Variables</b>, locate and select <code>Path</code>.</li>
+<li>Click <b>Edit</b> and add the directory of your project (e.g., <code>C:\MyProjects\TodoApp</code>).</li>
+<li>Save and close.</li>
+</ul>
+</li>
+<li><b>Verify the Change</b>:<ul>
+<li>Open a <b>new</b> Command Prompt.</li>
+<li>Run: <div class="fragment"><div class="line">where todo</div>
+</div><!-- fragment --></li>
+<li>If the path to <code>todo.exe</code> appears, it’s now accessible globally.</li>
+</ul>
+</li>
+<li><b>Test the <code>todo</code> Command</b>: <br  />
+ Run any command to ensure the program works: <div class="fragment"><div class="line">todo list</div>
+</div><!-- fragment --></li>
+</ol>
+<h2><a class="anchor" id="autotoc_md21"></a>
 Doxygen Documentation</h2>
 <p>If you want to view the generated Doxygen documentation for this project:</p>
 <ol type="1">

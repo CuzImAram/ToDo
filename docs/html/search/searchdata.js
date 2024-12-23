@@ -1,6 +1,6 @@
 var indexSectionsWithContent =
 {
-  0: ":acdefilmnoprstu",
+  0: ":acdefgilmnoprstuw",
   1: "t",
   2: "t",
   3: "almrst",

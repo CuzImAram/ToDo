@@ -215,23 +215,24 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        <span class="keywordtype">string</span> task(argv[2]);</div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        <a class="code hl_function" href="todo_8cpp.html#ade2993c15d978cb3c63ad7edcc285701">addTask</a>(tasks, task);</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        <a class="code hl_function" href="todo_8cpp.html#abba30971cdda3b8b2eb2746f3ee7259f">saveTasks</a>(tasks);</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command == <span class="stringliteral">&quot;remove&quot;</span> &amp;&amp; argc &gt; 2) {</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        <span class="keywordtype">int</span> index = stoi(argv[2]);</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        <a class="code hl_function" href="todo_8cpp.html#aebdca44d337f2bcd7071bcceb9f56bb8">removeTask</a>(tasks, index);</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        <a class="code hl_function" href="todo_8cpp.html#abba30971cdda3b8b2eb2746f3ee7259f">saveTasks</a>(tasks);</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command == <span class="stringliteral">&quot;done&quot;</span> &amp;&amp; argc &gt; 2) {</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        <span class="keywordtype">int</span> index = stoi(argv[2]);</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        <a class="code hl_function" href="todo_8cpp.html#a5938fa77407466486ef9cfe88267bf93">markDone</a>(tasks, index);</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        <a class="code hl_function" href="todo_8cpp.html#abba30971cdda3b8b2eb2746f3ee7259f">saveTasks</a>(tasks);</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command == <span class="stringliteral">&quot;reset&quot;</span>) {</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        <a class="code hl_function" href="todo_8cpp.html#a2367fb45338d4de23175a4fc16afa9c5">resetTasks</a>(tasks);</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        <a class="code hl_function" href="todo_8cpp.html#abba30971cdda3b8b2eb2746f3ee7259f">saveTasks</a>(tasks);</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        cout &lt;&lt; <span class="stringliteral">&quot;Invalid command.&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    }</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>}</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        <a class="code hl_function" href="todo_8cpp.html#a600478327502239195208d1fdca0f7c0">listTasks</a>(tasks);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command == <span class="stringliteral">&quot;remove&quot;</span> &amp;&amp; argc &gt; 2) {</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        <span class="keywordtype">int</span> index = stoi(argv[2]);</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        <a class="code hl_function" href="todo_8cpp.html#aebdca44d337f2bcd7071bcceb9f56bb8">removeTask</a>(tasks, index);</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        <a class="code hl_function" href="todo_8cpp.html#abba30971cdda3b8b2eb2746f3ee7259f">saveTasks</a>(tasks);</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command == <span class="stringliteral">&quot;done&quot;</span> &amp;&amp; argc &gt; 2) {</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        <span class="keywordtype">int</span> index = stoi(argv[2]);</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        <a class="code hl_function" href="todo_8cpp.html#a5938fa77407466486ef9cfe88267bf93">markDone</a>(tasks, index);</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>        <a class="code hl_function" href="todo_8cpp.html#abba30971cdda3b8b2eb2746f3ee7259f">saveTasks</a>(tasks);</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command == <span class="stringliteral">&quot;reset&quot;</span>) {</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        <a class="code hl_function" href="todo_8cpp.html#a2367fb45338d4de23175a4fc16afa9c5">resetTasks</a>(tasks);</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        <a class="code hl_function" href="todo_8cpp.html#abba30971cdda3b8b2eb2746f3ee7259f">saveTasks</a>(tasks);</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        cout &lt;&lt; <span class="stringliteral">&quot;Invalid command.&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    }</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>}</div>
 </div>
 <div class="ttc" id="astruct_task_html"><div class="ttname"><a href="struct_task.html">Task</a></div><div class="ttdoc">Represents a task in the ToDo list.</div><div class="ttdef"><b>Definition</b> <a href="#l00031">todo.cpp:31</a></div></div>
 <div class="ttc" id="astruct_task_html_a7a3c12f42d34fb8439ebee5b5877f886"><div class="ttname"><a href="struct_task.html#a7a3c12f42d34fb8439ebee5b5877f886">Task::description</a></div><div class="ttdeci">string description</div><div class="ttdef"><b>Definition</b> <a href="#l00032">todo.cpp:32</a></div></div>

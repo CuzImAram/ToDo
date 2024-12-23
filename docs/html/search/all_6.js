@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['install_3a_0',['Steps to Install:',['../index.html#autotoc_md8',1,'']]],
-  ['installation_1',['Installation',['../index.html#autotoc_md6',1,'']]]
+  ['globally_20executable_20on_20windows_0',['Make the &lt;tt&gt;todo&lt;/tt&gt; Command Globally Executable on Windows',['../index.html#autotoc_md19',1,'']]]
 ];
