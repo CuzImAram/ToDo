@@ -208,6 +208,7 @@ int main(int argc, char* argv[]) {
         string task(argv[2]);
         addTask(tasks, task);
         saveTasks(tasks);
+        listTasks(tasks);
     } else if (command == "remove" && argc > 2) {
         int index = stoi(argv[2]);
         removeTask(tasks, index);
