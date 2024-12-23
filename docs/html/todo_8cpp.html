@@ -94,7 +94,8 @@ $(function(){ initResizable(false); });
 
 <p>A simple ToDo command-line program to manage tasks.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<div class="textblock"><code>#include &lt;windows.h&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;fstream&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
@@ -110,6 +111,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a2209e40bf36a4074931060fbd55f7811" id="r_a2209e40bf36a4074931060fbd55f7811"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2209e40bf36a4074931060fbd55f7811">getExecutableDirectory</a> ()</td></tr>
+<tr class="memdesc:a2209e40bf36a4074931060fbd55f7811"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the directory path of the currently executing executable.  <br /></td></tr>
+<tr class="separator:a2209e40bf36a4074931060fbd55f7811"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a600478327502239195208d1fdca0f7c0" id="r_a600478327502239195208d1fdca0f7c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a600478327502239195208d1fdca0f7c0">listTasks</a> (vector&lt; <a class="el" href="struct_task.html">Task</a> &gt; &amp;tasks)</td></tr>
 <tr class="memdesc:a600478327502239195208d1fdca0f7c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lists all tasks.  <br /></td></tr>
 <tr class="separator:a600478327502239195208d1fdca0f7c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,8 +144,8 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a192ae3fbc914c80cfaa03dd6f27193d1" id="r_a192ae3fbc914c80cfaa03dd6f27193d1"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a192ae3fbc914c80cfaa03dd6f27193d1">FILENAME</a> = &quot;todo.txt&quot;</td></tr>
-<tr class="separator:a192ae3fbc914c80cfaa03dd6f27193d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a409eec8a04899986e5253eac13b64865" id="r_a409eec8a04899986e5253eac13b64865"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a409eec8a04899986e5253eac13b64865">FILENAME</a> = <a class="el" href="#a2209e40bf36a4074931060fbd55f7811">getExecutableDirectory</a>() + &quot;\\todo.txt&quot;</td></tr>
+<tr class="separator:a409eec8a04899986e5253eac13b64865"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A simple ToDo command-line program to manage tasks. </p>
@@ -183,7 +187,30 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="todo_8cpp_source.html#l00068">68</a> of file <a class="el" href="todo_8cpp_source.html">todo.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="todo_8cpp_source.html#l00085">85</a> of file <a class="el" href="todo_8cpp_source.html">todo.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2209e40bf36a4074931060fbd55f7811" name="a2209e40bf36a4074931060fbd55f7811"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2209e40bf36a4074931060fbd55f7811">&#9670;&#160;</a></span>getExecutableDirectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string getExecutableDirectory </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves the directory path of the currently executing executable. </p>
+<p>This function uses the Windows API to obtain the full path of the executable and extracts the directory portion of the path by finding the last directory separator.</p>
+<dl class="section return"><dt>Returns</dt><dd>std::string The directory path where the executable is located. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="todo_8cpp_source.html#l00032">32</a> of file <a class="el" href="todo_8cpp_source.html">todo.cpp</a>.</p>
 
 </div>
 </div>
@@ -210,7 +237,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="todo_8cpp_source.html#l00050">50</a> of file <a class="el" href="todo_8cpp_source.html">todo.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="todo_8cpp_source.html#l00067">67</a> of file <a class="el" href="todo_8cpp_source.html">todo.cpp</a>.</p>
 
 </div>
 </div>
@@ -243,7 +270,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="todo_8cpp_source.html#l00148">148</a> of file <a class="el" href="todo_8cpp_source.html">todo.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="todo_8cpp_source.html#l00165">165</a> of file <a class="el" href="todo_8cpp_source.html">todo.cpp</a>.</p>
 
 </div>
 </div>
@@ -276,7 +303,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>An integer status code (1 for invalid input, 0 for success). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="todo_8cpp_source.html#l00192">192</a> of file <a class="el" href="todo_8cpp_source.html">todo.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="todo_8cpp_source.html#l00209">209</a> of file <a class="el" href="todo_8cpp_source.html">todo.cpp</a>.</p>
 
 </div>
 </div>
@@ -308,7 +335,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="todo_8cpp_source.html#l00094">94</a> of file <a class="el" href="todo_8cpp_source.html">todo.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="todo_8cpp_source.html#l00111">111</a> of file <a class="el" href="todo_8cpp_source.html">todo.cpp</a>.</p>
 
 </div>
 </div>
@@ -340,7 +367,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="todo_8cpp_source.html#l00079">79</a> of file <a class="el" href="todo_8cpp_source.html">todo.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="todo_8cpp_source.html#l00096">96</a> of file <a class="el" href="todo_8cpp_source.html">todo.cpp</a>.</p>
 
 </div>
 </div>
@@ -367,7 +394,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="todo_8cpp_source.html#l00108">108</a> of file <a class="el" href="todo_8cpp_source.html">todo.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="todo_8cpp_source.html#l00125">125</a> of file <a class="el" href="todo_8cpp_source.html">todo.cpp</a>.</p>
 
 </div>
 </div>
@@ -394,7 +421,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="todo_8cpp_source.html#l00174">174</a> of file <a class="el" href="todo_8cpp_source.html">todo.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="todo_8cpp_source.html#l00191">191</a> of file <a class="el" href="todo_8cpp_source.html">todo.cpp</a>.</p>
 
 </div>
 </div>
@@ -423,25 +450,25 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A new string with leading and trailing whitespaces removed. If the input string contains only whitespaces, an empty string is returned. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="todo_8cpp_source.html#l00122">122</a> of file <a class="el" href="todo_8cpp_source.html">todo.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="todo_8cpp_source.html#l00139">139</a> of file <a class="el" href="todo_8cpp_source.html">todo.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a192ae3fbc914c80cfaa03dd6f27193d1" name="a192ae3fbc914c80cfaa03dd6f27193d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a192ae3fbc914c80cfaa03dd6f27193d1">&#9670;&#160;</a></span>FILENAME</h2>
+<a id="a409eec8a04899986e5253eac13b64865" name="a409eec8a04899986e5253eac13b64865"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a409eec8a04899986e5253eac13b64865">&#9670;&#160;</a></span>FILENAME</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const string FILENAME = &quot;todo.txt&quot;</td>
+          <td class="memname">const std::string FILENAME = <a class="el" href="#a2209e40bf36a4074931060fbd55f7811">getExecutableDirectory</a>() + &quot;\\todo.txt&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The filename where tasks are stored. </p>
+<p>File path relative to the .exe location </p>
 
-<p class="definition">Definition at line <a class="el" href="todo_8cpp_source.html#l00023">23</a> of file <a class="el" href="todo_8cpp_source.html">todo.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="todo_8cpp_source.html#l00040">40</a> of file <a class="el" href="todo_8cpp_source.html">todo.cpp</a>.</p>
 
 </div>
 </div>

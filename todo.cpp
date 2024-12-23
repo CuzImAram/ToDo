@@ -12,6 +12,7 @@
  * @see todo class
  */
 
+#include <windows.h>
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -20,7 +21,23 @@
 
 using namespace std;
 
-const string FILENAME = "todo.txt"; /**< The filename where tasks are stored. */
+/**
+ * @brief Retrieves the directory path of the currently executing executable.
+ *
+ * This function uses the Windows API to obtain the full path of the executable
+ * and extracts the directory portion of the path by finding the last directory separator.
+ *
+ * @return std::string The directory path where the executable is located.
+ */
+std::string getExecutableDirectory() {
+    char path[MAX_PATH];
+    GetModuleFileName(NULL, path, MAX_PATH); // Gets the full path to the .exe
+    std::string fullPath = path;
+    size_t pos = fullPath.find_last_of("\\/");
+    return fullPath.substr(0, pos); // Extracts the directory path
+}
+
+const std::string FILENAME = getExecutableDirectory() + "\\todo.txt"; /**< File path relative to the .exe location */
 
 /**
  * @struct Task
@@ -201,25 +218,33 @@ int main(int argc, char* argv[]) {
     }
 
     string command = argv[1];
+    string task;
+
+    for (int i = 2; i < argc; ++i) {
+        task += argv[i];
+        if (i < argc - 1) task += " "; // Add space between arguments
+    }
 
     if (command == "list") {
         listTasks(tasks);
     } else if (command == "add" && argc > 2) {
-        string task(argv[2]);
         addTask(tasks, task);
         saveTasks(tasks);
         listTasks(tasks);
     } else if (command == "remove" && argc > 2) {
-        int index = stoi(argv[2]);
+        int index = stoi(task);
         removeTask(tasks, index);
         saveTasks(tasks);
+        listTasks(tasks);
     } else if (command == "done" && argc > 2) {
-        int index = stoi(argv[2]);
+        int index = stoi(task);
         markDone(tasks, index);
         saveTasks(tasks);
+        listTasks(tasks);
     } else if (command == "reset") {
         resetTasks(tasks);
         saveTasks(tasks);
+        cout << "All tasks reset." << endl;
     } else {
         cout << "Invalid command." << endl;
     }

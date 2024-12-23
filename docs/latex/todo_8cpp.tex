@@ -5,6 +5,7 @@
 A simple To\+Do command-\/line program to manage tasks.  
 
 
+{\ttfamily \#include $<$windows.\+h$>$}\newline
 {\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include $<$fstream$>$}\newline
 {\ttfamily \#include $<$vector$>$}\newline
@@ -18,6 +19,8 @@ struct \mbox{\hyperlink{struct_task}{Task}}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+std\+::string \mbox{\hyperlink{todo_8cpp_a2209e40bf36a4074931060fbd55f7811}{get\+Executable\+Directory}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the directory path of the currently executing executable. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{todo_8cpp_a600478327502239195208d1fdca0f7c0}{list\+Tasks}} (vector$<$ \mbox{\hyperlink{struct_task}{Task}} $>$ \&tasks)
 \begin{DoxyCompactList}\small\item\em Lists all tasks. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{todo_8cpp_ade2993c15d978cb3c63ad7edcc285701}{add\+Task}} (vector$<$ \mbox{\hyperlink{struct_task}{Task}} $>$ \&tasks, const string \&task)
@@ -39,7 +42,7 @@ int \mbox{\hyperlink{todo_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int ar
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-const string \mbox{\hyperlink{todo_8cpp_a192ae3fbc914c80cfaa03dd6f27193d1}{FILENAME}} = "{}todo.\+txt"{}
+const std\+::string \mbox{\hyperlink{todo_8cpp_a409eec8a04899986e5253eac13b64865}{FILENAME}} = \mbox{\hyperlink{todo_8cpp_a2209e40bf36a4074931060fbd55f7811}{get\+Executable\+Directory}}() + "{}\textbackslash{}\textbackslash{}todo.\+txt"{}
 \end{DoxyCompactItemize}
 
 
@@ -84,7 +87,26 @@ Creates a new task with the given description and adds it to the tasks list.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{todo_8cpp_source_l00068}{68}} of file \mbox{\hyperlink{todo_8cpp_source}{todo.\+cpp}}.
+Definition at line \mbox{\hyperlink{todo_8cpp_source_l00085}{85}} of file \mbox{\hyperlink{todo_8cpp_source}{todo.\+cpp}}.
+
+\Hypertarget{todo_8cpp_a2209e40bf36a4074931060fbd55f7811}\index{todo.cpp@{todo.cpp}!getExecutableDirectory@{getExecutableDirectory}}
+\index{getExecutableDirectory@{getExecutableDirectory}!todo.cpp@{todo.cpp}}
+\doxysubsubsection{\texorpdfstring{getExecutableDirectory()}{getExecutableDirectory()}}
+{\footnotesize\ttfamily \label{todo_8cpp_a2209e40bf36a4074931060fbd55f7811} 
+std\+::string get\+Executable\+Directory (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the directory path of the currently executing executable. 
+
+This function uses the Windows API to obtain the full path of the executable and extracts the directory portion of the path by finding the last directory separator.
+
+\begin{DoxyReturn}{Returns}
+std\+::string The directory path where the executable is located. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{todo_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{todo_8cpp_source}{todo.\+cpp}}.
 
 \Hypertarget{todo_8cpp_a600478327502239195208d1fdca0f7c0}\index{todo.cpp@{todo.cpp}!listTasks@{listTasks}}
 \index{listTasks@{listTasks}!todo.cpp@{todo.cpp}}
@@ -103,7 +125,7 @@ Iterates through the tasks vector and displays each task\textquotesingle{}s desc
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{todo_8cpp_source_l00050}{50}} of file \mbox{\hyperlink{todo_8cpp_source}{todo.\+cpp}}.
+Definition at line \mbox{\hyperlink{todo_8cpp_source_l00067}{67}} of file \mbox{\hyperlink{todo_8cpp_source}{todo.\+cpp}}.
 
 \Hypertarget{todo_8cpp_a9e0cd78d6f08e49303a6b710c623347a}\index{todo.cpp@{todo.cpp}!loadTasksFromFile@{loadTasksFromFile}}
 \index{loadTasksFromFile@{loadTasksFromFile}!todo.cpp@{todo.cpp}}
@@ -134,7 +156,7 @@ Tasks are loaded into the provided vector, clearing any existing tasks before lo
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{todo_8cpp_source_l00148}{148}} of file \mbox{\hyperlink{todo_8cpp_source}{todo.\+cpp}}.
+Definition at line \mbox{\hyperlink{todo_8cpp_source_l00165}{165}} of file \mbox{\hyperlink{todo_8cpp_source}{todo.\+cpp}}.
 
 \Hypertarget{todo_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\index{todo.cpp@{todo.cpp}!main@{main}}
 \index{main@{main}!todo.cpp@{todo.cpp}}
@@ -158,7 +180,7 @@ An integer status code (1 for invalid input, 0 for success).
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{todo_8cpp_source_l00192}{192}} of file \mbox{\hyperlink{todo_8cpp_source}{todo.\+cpp}}.
+Definition at line \mbox{\hyperlink{todo_8cpp_source_l00209}{209}} of file \mbox{\hyperlink{todo_8cpp_source}{todo.\+cpp}}.
 
 \Hypertarget{todo_8cpp_a5938fa77407466486ef9cfe88267bf93}\index{todo.cpp@{todo.cpp}!markDone@{markDone}}
 \index{markDone@{markDone}!todo.cpp@{todo.cpp}}
@@ -179,7 +201,7 @@ Sets the completion status of the task at the specified index to true.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{todo_8cpp_source_l00094}{94}} of file \mbox{\hyperlink{todo_8cpp_source}{todo.\+cpp}}.
+Definition at line \mbox{\hyperlink{todo_8cpp_source_l00111}{111}} of file \mbox{\hyperlink{todo_8cpp_source}{todo.\+cpp}}.
 
 \Hypertarget{todo_8cpp_aebdca44d337f2bcd7071bcceb9f56bb8}\index{todo.cpp@{todo.cpp}!removeTask@{removeTask}}
 \index{removeTask@{removeTask}!todo.cpp@{todo.cpp}}
@@ -200,7 +222,7 @@ Removes the task at the specified index in the tasks list.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{todo_8cpp_source_l00079}{79}} of file \mbox{\hyperlink{todo_8cpp_source}{todo.\+cpp}}.
+Definition at line \mbox{\hyperlink{todo_8cpp_source_l00096}{96}} of file \mbox{\hyperlink{todo_8cpp_source}{todo.\+cpp}}.
 
 \Hypertarget{todo_8cpp_a2367fb45338d4de23175a4fc16afa9c5}\index{todo.cpp@{todo.cpp}!resetTasks@{resetTasks}}
 \index{resetTasks@{resetTasks}!todo.cpp@{todo.cpp}}
@@ -219,7 +241,7 @@ Removes all tasks from the tasks list.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{todo_8cpp_source_l00108}{108}} of file \mbox{\hyperlink{todo_8cpp_source}{todo.\+cpp}}.
+Definition at line \mbox{\hyperlink{todo_8cpp_source_l00125}{125}} of file \mbox{\hyperlink{todo_8cpp_source}{todo.\+cpp}}.
 
 \Hypertarget{todo_8cpp_abba30971cdda3b8b2eb2746f3ee7259f}\index{todo.cpp@{todo.cpp}!saveTasks@{saveTasks}}
 \index{saveTasks@{saveTasks}!todo.cpp@{todo.cpp}}
@@ -238,7 +260,7 @@ Writes the current tasks to the "{}todo.\+txt"{} file, saving the description an
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{todo_8cpp_source_l00174}{174}} of file \mbox{\hyperlink{todo_8cpp_source}{todo.\+cpp}}.
+Definition at line \mbox{\hyperlink{todo_8cpp_source_l00191}{191}} of file \mbox{\hyperlink{todo_8cpp_source}{todo.\+cpp}}.
 
 \Hypertarget{todo_8cpp_a3101bc0142a49d9d11ad3f8cac766a2d}\index{todo.cpp@{todo.cpp}!trim@{trim}}
 \index{trim@{trim}!todo.cpp@{todo.cpp}}
@@ -262,18 +284,18 @@ A new string with leading and trailing whitespaces removed. If the input string 
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{todo_8cpp_source_l00122}{122}} of file \mbox{\hyperlink{todo_8cpp_source}{todo.\+cpp}}.
+Definition at line \mbox{\hyperlink{todo_8cpp_source_l00139}{139}} of file \mbox{\hyperlink{todo_8cpp_source}{todo.\+cpp}}.
 
 
 
 \doxysubsection{Variable Documentation}
-\Hypertarget{todo_8cpp_a192ae3fbc914c80cfaa03dd6f27193d1}\index{todo.cpp@{todo.cpp}!FILENAME@{FILENAME}}
+\Hypertarget{todo_8cpp_a409eec8a04899986e5253eac13b64865}\index{todo.cpp@{todo.cpp}!FILENAME@{FILENAME}}
 \index{FILENAME@{FILENAME}!todo.cpp@{todo.cpp}}
 \doxysubsubsection{\texorpdfstring{FILENAME}{FILENAME}}
-{\footnotesize\ttfamily \label{todo_8cpp_a192ae3fbc914c80cfaa03dd6f27193d1} 
-const string FILENAME = "{}todo.\+txt"{}}
+{\footnotesize\ttfamily \label{todo_8cpp_a409eec8a04899986e5253eac13b64865} 
+const std\+::string FILENAME = \mbox{\hyperlink{todo_8cpp_a2209e40bf36a4074931060fbd55f7811}{get\+Executable\+Directory}}() + "{}\textbackslash{}\textbackslash{}todo.\+txt"{}}
 
-The filename where tasks are stored. 
+File path relative to the .exe location 
 
-Definition at line \mbox{\hyperlink{todo_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{todo_8cpp_source}{todo.\+cpp}}.
+Definition at line \mbox{\hyperlink{todo_8cpp_source_l00040}{40}} of file \mbox{\hyperlink{todo_8cpp_source}{todo.\+cpp}}.
 
